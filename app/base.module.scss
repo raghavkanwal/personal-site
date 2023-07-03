@@ -1,0 +1,35 @@
+.pageContainer {
+    width:100%;
+    max-width: 40em;
+    margin: 0 auto;   
+    padding: 8em 0 5rem;
+    
+    h1 {
+        font-variation-settings: "wght" 700;
+        font-size: 1.4rem;
+        margin-bottom: 1em;
+        span {
+            border-bottom: 3px solid var(--border-color-dark);
+        }
+    }
+    p {
+        font-variation-settings: "wght" 250;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .contentContainer {
+        padding-bottom: 5rem;   
+        border-bottom: 1px solid var(--border-color-dark);
+    }
+
+    .footerContainer {
+        p {
+            font-size: 0.75rem;
+        }
+    }
+}
+
+.navContainer {
+    text-align: right;
+}
