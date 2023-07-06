@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './nav.module.scss'
-import { navigationMenuItems } from './navigation'
+import { navigationMenuItems } from './navigation-items'
 import Link from 'next/link'
 
 export default function Nav() {
