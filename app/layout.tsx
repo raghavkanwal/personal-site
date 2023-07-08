@@ -1,10 +1,12 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import styles from './base.module.scss'
 import Nav from '@/components/Nav/nav'
 import Footer from '@/components/Footer/footer'
 
 const inter = Inter({ subsets: ['latin'] })
+const poppins = Poppins({ subsets: ['latin'], weight: ['300'] })
 
 export const metadata = {
   title: 'Raghav Kanwal',
@@ -18,12 +20,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={poppins.className}>
         <div className={styles.pageContainer}>
           <aside className={styles.navContainer}>
             <Nav />
           </aside>
-          <main className={styles.contentContainer}>
+          <main className={`${styles.contentContainer} ${inter.className}`}>
             {children}
           </main>
           <Footer />

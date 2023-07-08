@@ -7,7 +7,10 @@ export default function Nav() {
     return (
         <main className={styles.navContainer}>
             { navigationMenuItems.map((item, idx) => {
-                return (<Link className={styles.link} key={idx} href={item.path}>{item.name}</Link>)
+                return (<span key={idx}>
+                    <Link className={styles.link} href={item.path}>{item.name}</Link>
+                    { idx === navigationMenuItems.length -1 ? "" : <span className={styles.separator}>/</span> }
+                    </span>)
             }) }
         </main>
     )

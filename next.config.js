@@ -10,12 +10,6 @@ const nextConfig = {
       sharp: "commonjs sharp",
       canvas: "commonjs canvas",
     })
-    config.plugins.push(
-      new webpack.ProvidePlugin({
-        Buffer: ["buffer", "Buffer"],
-        process: "process/browser",
-      })
-    )
     return config
   }
 }

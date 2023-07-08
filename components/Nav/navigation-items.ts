@@ -4,8 +4,8 @@ export const navigationMenuItems = [
         path: "/"
     },
     {
-        name: "Projects",
-        path: "/projects"
+        name: "Work",
+        path: "/work"
     },
     {
         name: "Resume",
