@@ -11,8 +11,8 @@ export const navigationMenuItems = [
         name: "Resume",
         path: "/resume"
     },
-    {
-        name: "Contact",
-        path: "/contact"
-    }
+    // {
+    //     name: "Contact",
+    //     path: "/contact"
+    // }
 ];
