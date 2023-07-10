@@ -3,6 +3,8 @@ import { badgeVariants } from "@/components/ui/badge";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import styles from './workpage.module.scss'
 
+import history from './work-history.json'
+
 export default function WorkPage() {
     return (<main>
         <h1><span>Work</span></h1>
@@ -18,19 +20,21 @@ export default function WorkPage() {
                         <AccordionTrigger>Roles and Responsibilities</AccordionTrigger>
                         <AccordionContent>
                             <ul className={styles.bulletPoints}>
-                                <li>Developed &amp; maintained features for web applications used by more than 20,000 e-commerce businesses to manage over 600 million transactions annually.</li>
-                                <li>Mentored and led a team of eight frontend developers in engineering the front- end for a SaaS product in the Order and Warehouse management domain, built with Angular and lonic.</li>
-                                <li>Contributed to the design and implementation of a UX guideline and reusable UI component system based on Angular and Storybook.</li>
-                                <li>Led front-end development for new SaaS products in the e-commerce shipping and logistics sector, utilizing Next.js and React. </li>
-                                <li>Implemented, maintained and worked on the sunset process of an in-house Javascript framework built with vanilla JS and legacy libraries such as jQuery, Backbone and Underscore, among others.</li>
-                                <li>Involved in the hiring and onboarding process: screening and interviewing candidates, evaluating tech assignments, onboarding new team members.</li>
+                                <li className="mb-2">Developed &amp; maintained features for web applications used by more than 20,000 e-commerce businesses to manage over 600 million transactions annually.</li>
+                                <li className="mb-2">Mentored and led a team of eight frontend developers in engineering the front- end for a SaaS product in the Order and Warehouse management domain, built with Angular and lonic.</li>
+                                <li className="mb-2">Contributed to the design and implementation of a UX guideline and reusable UI component system based on Angular and Storybook.</li>
+                                <li className="mb-2">Led front-end development for new SaaS products in the e-commerce shipping and logistics sector, utilizing Next.js and React. </li>
+                                <li className="mb-2">Implemented, maintained and worked on the sunset process of an in-house Javascript framework built with vanilla JS and legacy libraries such as jQuery, Backbone and Underscore, among others.</li>
+                                <li className="mb-2">Involved in the hiring and onboarding process: screening and interviewing candidates, evaluating tech assignments, onboarding new team members.</li>
                             </ul>
                         </AccordionContent>
                     </AccordionItem>
                 </Accordion>
             </CardContent>
             <CardFooter>
-                <p><span className={badgeVariants({ variant: "outline" })}>JavaScript</span></p>
+                <div className="flex gap-x-2 flex-wrap">
+                    { history.unicommerce.map((skill, idx) => <span key={idx} className={`${badgeVariants({ variant: "outline" })} mb-2`}>{skill}</span>)}
+                </div>
             </CardFooter>
         </Card>
         <Card className="mt-6">
@@ -53,7 +57,9 @@ export default function WorkPage() {
                 </Accordion>
             </CardContent>
             <CardFooter>
-                <p><span className={badgeVariants({ variant: "outline" })}>JavaScript</span></p>
+            <div className="flex gap-x-2 flex-wrap">
+                    { history.iimjobs.map((skill, idx) => <span key={idx} className={`${badgeVariants({ variant: "outline" })} mb-2`}>{skill}</span>)}
+                </div>
             </CardFooter>
         </Card>
         <Card className="mt-6">
@@ -75,7 +81,9 @@ export default function WorkPage() {
                 </Accordion>
             </CardContent>
             <CardFooter>
-                <p><span className={badgeVariants({ variant: "outline" })}>JavaScript</span></p>
+            <div className="flex gap-x-2 flex-wrap">
+                    { history.mobikasa.map((skill, idx) => <span key={idx} className={`${badgeVariants({ variant: "outline" })} mb-2`}>{skill}</span>)}
+                </div>
             </CardFooter>
         </Card>
     </main>)
